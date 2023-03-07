@@ -3,11 +3,11 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import AdminClasses from "./Components/AdminClasses";
 import { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-
+import { Container, Row, Col, Modal } from "react-bootstrap";
+// import AdminModal from "./Components/AdminModal";
+import AdminProjects from "./Components/AdminProjects";
 function App() {
   const [classDetails, setClassDetails] = useState({
-    // className: "Class A",
     totalStudents: 47,
     totalProjects: 17,
     totalSupervisors: 4,
@@ -23,7 +23,7 @@ function App() {
 
   return (
     <Container>
-      <Row>
+      {/* <Row>
         <Col>
           <AdminClasses
             className={classDetails.className}
@@ -34,7 +34,8 @@ function App() {
             onPass={handlePass}
           />
         </Col>
-      </Row>
+      </Row> */}
+      <AdminProjects />
     </Container>
   );
 }
