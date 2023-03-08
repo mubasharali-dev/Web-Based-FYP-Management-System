@@ -7,6 +7,7 @@ import { Container, Row, Col, Modal } from "react-bootstrap";
 // import AdminModal from "./Components/AdminModal";
 import AdminProjects from "./Components/AdminProjects";
 import AdminTeachers from "./Components/AdminTeachers";
+import Timeline from "./Components/Timeline";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function App() {
@@ -39,7 +40,8 @@ function App() {
         </Col>
       </Row> */}
       {/* <AdminProjects /> */}
-      <AdminTeachers />
+      {/* <AdminTeachers /> */}
+      <Timeline />
     </Container>
   );
 }
