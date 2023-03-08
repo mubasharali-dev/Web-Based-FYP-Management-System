@@ -6,6 +6,9 @@ import { useState } from "react";
 import { Container, Row, Col, Modal } from "react-bootstrap";
 // import AdminModal from "./Components/AdminModal";
 import AdminProjects from "./Components/AdminProjects";
+import AdminTeachers from "./Components/AdminTeachers";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 function App() {
   const [classDetails, setClassDetails] = useState({
     totalStudents: 47,
@@ -35,7 +38,8 @@ function App() {
           />
         </Col>
       </Row> */}
-      <AdminProjects />
+      {/* <AdminProjects /> */}
+      <AdminTeachers />
     </Container>
   );
 }
