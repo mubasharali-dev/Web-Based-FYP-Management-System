@@ -1,0 +1,83 @@
+.select-class {
+  position: relative;
+  width: 27em;
+  height: 2.8em;
+  margin-left: auto;
+}
+.select-supervisor {
+  background-color: transparent;
+  margin: 1em 7em 1em 3em;
+  color: #6759d1;
+  font-size: 1.25em;
+}
+
+/* * {
+  font-family: Poppins;
+}
+.date-picker-container {
+  position: relative;
+  width: 20em;
+  height: 2.8em;
+  margin-left: auto;
+}
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.react-datepicker {
+  position: absolute;
+  right: 0;
+  width: 250px;
+}
+
+.react-datepicker__input-container input {
+  width: 100%;
+}
+.title {
+  margin: 1em 7em 1em 3em;
+  color: #6759d1;
+  font-size: 1.25em;
+}
+.dropdown-calender {
+  outline: 0;
+  border: 0;
+}
+
+.datepicker-project {
+  outline: none;
+  border: none;
+}
+
+.heading {
+  background-color: white !important;
+  border-bottom: none !important;
+  color: #6759d1;
+  font-size: 2.8em;
+}
+
+.footer-heading {
+  background-color: white !important;
+  border-top: none !important;
+  color: #6759d1;
+  font-size: 2.8em;
+}
+
+.cancel-button {
+  border-radius: 0;
+  color: #6759d1;
+  background-color: white;
+  border: 0;
+  margin: 0.2em 3em;
+}
+.add-button {
+  background-color: #6759d1;
+  color: white;
+  border-radius: 0;
+  margin: 0.2em 1em;
+}
+.add-button:hover {
+  color: #6759d1;
+  background-color: white;
+  border: 0;
+} */

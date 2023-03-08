@@ -9,6 +9,7 @@ import AdminProjects from "./Components/AdminProjects";
 import AdminTeachers from "./Components/AdminTeachers";
 import Timeline from "./Components/Timeline";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import AddProjectPage from "./Components/AddProjectPage";
 
 function App() {
   const [classDetails, setClassDetails] = useState({
@@ -41,7 +42,8 @@ function App() {
       </Row> */}
       {/* <AdminProjects /> */}
       {/* <AdminTeachers /> */}
-      <Timeline />
+      {/* <Timeline /> */}
+      <AddProjectPage />
     </Container>
   );
 }

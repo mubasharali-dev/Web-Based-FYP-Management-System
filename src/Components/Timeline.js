@@ -3,6 +3,8 @@ import { Card, Button, Form } from "react-bootstrap";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import "./timeline.css";
 
 function Timeline() {
@@ -32,9 +34,17 @@ function Timeline() {
       >
         <Card.Header className="d-flex justify-content-between heading">
           <h4 className="main-heading">Update Deadlines and Timeline</h4>
-          <button className="btn btn-link">
-            <i className="bi bi-x-lg"></i>
-          </button>
+          <Button
+            variant="outline-secondary"
+            style={{
+              outline: "none",
+              border: "none",
+              color: "#6759D1",
+              fontSize: "0.75em",
+            }}
+          >
+            <FontAwesomeIcon icon={faXmark} />
+          </Button>
         </Card.Header>
         <Card.Body>
           <Form>
