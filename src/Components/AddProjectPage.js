@@ -7,7 +7,6 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import "./addprojectpage.css";
 
 function AddProjectPage() {
-  // USE STATE HOOK TO MANAGE THE DATA PICKER INDIVIDUALLY FOR EACH
   const [selectedClass, setSelectedClass] = useState(null);
   const [selectedSupervisor, setSelectedSupervisor] = useState(null);
 
@@ -34,27 +33,11 @@ function AddProjectPage() {
     }
   };
 
-  const inputStyle = {
-    border: "none",
-    boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.25)",
-    outline: "none",
-    borderRadius: "0",
-    width: "20em",
-    margin: "1em",
-  };
-
-  const inputStyleFocus = {
-    ...inputStyle,
-    // boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.25)",
-    boxShadow: "none",
-    width: "20em",
-    margin: "1em",
-  };
   return (
     <div
-      className="d-flex justify-content-center align-items-center"
+      className="d-flex justify-content-center align-items-center main-card"
       style={{
-        margin: "2em",
+        margin: "5em 18em",
         outline: "none",
         border: "0",
         boxShadow: "0px 2px 6px rgba(0, 0, 0, 0.25)",
@@ -63,7 +46,7 @@ function AddProjectPage() {
       }}
     >
       <Card style={{ outline: "0", border: "0" }}>
-        <Card.Header className="d-flex justify-content-between heading">
+        <Card.Header className="d-flex justify-content-between heading ">
           <h4 className="main-heading">Add Project</h4>
           <Button
             variant="outline-secondary"
@@ -73,24 +56,16 @@ function AddProjectPage() {
               color: "#6759D1",
               fontSize: "0.75em",
             }}
-            className="ms-auto align-self-center"
+            className="ms-auto align-self-start"
           >
             <FontAwesomeIcon icon={faXmark} />
           </Button>
         </Card.Header>
-
         <div className="select-class" style={{ display: "flex", gap: "10px" }}>
           <DropdownButton
-            title={selectedClass ? selectedClass : "Select class"}
+            title={selectedClass ? selectedClass : "Select Class*"}
             onSelect={handleClassSelect}
-            className="dropdown-btn"
-            style={{
-              width: "20em",
-              border: "none",
-              outline: "none",
-              boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.25)",
-              borderRadius: "0",
-            }}
+            className="select-dropdown select-class"
             variant="transparent"
             required
           >
@@ -109,17 +84,10 @@ function AddProjectPage() {
         <div className="select-supervisor">
           <DropdownButton
             title={
-              selectedSupervisor ? selectedSupervisor : "Select Supervisor"
+              selectedSupervisor ? selectedSupervisor : "Select Supervisor*"
             }
             onSelect={handleSupervisorSelect}
-            // style={buttonStyle}
-            style={{
-              width: "20em",
-              border: "none",
-              outline: "none",
-              boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.25)",
-              borderRadius: "0",
-            }}
+            className="select-dropdown"
             variant="transparent"
             required
           >
@@ -134,11 +102,15 @@ function AddProjectPage() {
         </div>
         {/* // SElection of students  */}
 
-        <Dropdown multiple>
-          <Dropdown.Toggle variant="secondary" id="dropdown-students">
+        <Dropdown
+          multiple
+          className="select-dropdown"
+          style={{ width: "35em" }}
+        >
+          <Dropdown.Toggle variant="transparent" id="dropdown-students">
             {selectedStudents.length > 0
               ? `${selectedStudents.length} Students Selected`
-              : "Select Students"}
+              : "Select Students* - Min 1, Max 3"}
           </Dropdown.Toggle>
 
           <Dropdown.Menu>
@@ -180,15 +152,44 @@ function AddProjectPage() {
         {/* // WRITE TITLE OF THE PROJECT  */}
 
         <Form.Group>
-          {/* <Form.Label>Project Title</Form.Label>   */}
           <Form.Control
             type="text"
-            placeholder="Write title"
-            style={inputStyle}
-            onFocus={(e) => (e.target.style = inputStyleFocus)}
-            onBlur={(e) => (e.target.style = inputStyle)}
+            placeholder="Write Title*"
+            className="select-dropdown"
+            style={{ boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.25)" }}
+            // onBlur={(e) => (e.target.style = inputStyle)}
           />
         </Form.Group>
+        {/* SELECT THE EXAMINER  */}
+        <div
+          className="select-supervisor"
+          style={{ display: "flex", alignItems: "center" }}
+        >
+          <DropdownButton
+            title={selectedSupervisor ? selectedSupervisor : "Select Examiner"}
+            onSelect={handleSupervisorSelect}
+            className="select-dropdown"
+            variant="transparent"
+            required
+          >
+            <Dropdown.Item eventKey="Muhammad Nawaz">
+              Muhammad Nawaz
+            </Dropdown.Item>
+            <Dropdown.Item eventKey="Hannan Bin Liaquat">
+              Hannan Bin Liaquat
+            </Dropdown.Item>
+            <Dropdown.Item eventKey="Dr. AD">Dr. AD</Dropdown.Item>
+          </DropdownButton>
+          <Button
+            variant="primary"
+            className="add-button"
+            style={{ marginLeft: "0.5em" }}
+          >
+            Choose Automatically
+          </Button>
+        </div>
+
+        {/* //FOOTER CODE FOR BUTTONS */}
         <div className="footer-heading">
           <Card.Footer
             className="d-flex justify-content-end "

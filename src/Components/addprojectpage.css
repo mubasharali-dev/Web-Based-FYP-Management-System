@@ -1,83 +1,78 @@
 .select-class {
-  position: relative;
-  width: 27em;
-  height: 2.8em;
-  margin-left: auto;
+  min-width: 0;
+  width: fit-content;
+  max-width: 26em;
+  white-space: nowrap;
 }
-.select-supervisor {
-  background-color: transparent;
-  margin: 1em 7em 1em 3em;
-  color: #6759d1;
-  font-size: 1.25em;
-}
-
-/* * {
-  font-family: Poppins;
-}
-.date-picker-container {
-  position: relative;
-  width: 20em;
-  height: 2.8em;
-  margin-left: auto;
-}
-.form-control:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-.react-datepicker {
-  position: absolute;
-  right: 0;
-  width: 250px;
-}
-
-.react-datepicker__input-container input {
-  width: 100%;
-}
-.title {
-  margin: 1em 7em 1em 3em;
-  color: #6759d1;
-  font-size: 1.25em;
-}
-.dropdown-calender {
-  outline: 0;
-  border: 0;
-}
-
-.datepicker-project {
-  outline: none;
+.select-dropdown {
+  width: 25em;
+  height: 3.5em;
+  margin: 0.5em;
   border: none;
-}
-
-.heading {
-  background-color: white !important;
-  border-bottom: none !important;
-  color: #6759d1;
-  font-size: 2.8em;
-}
-
-.footer-heading {
-  background-color: white !important;
-  border-top: none !important;
-  color: #6759d1;
-  font-size: 2.8em;
-}
-
-.cancel-button {
+  outline: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0;
-  color: #6759d1;
-  background-color: white;
-  border: 0;
-  margin: 0.2em 3em;
+  flex-grow: 1;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
-.add-button {
-  background-color: #6759d1;
-  color: white;
-  border-radius: 0;
-  margin: 0.2em 1em;
+
+/* Media query for phones */
+@media (max-width: 767px) {
+  .main-card {
+    margin: 0;
+    min-width: 0;
+    width: fit-content;
+    max-width: 12em;
+    white-space: nowrap;
+  }
+  .select-class {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 10px;
+  }
+  .select-dropdown {
+    max-width: 17em;
+  }
 }
-.add-button:hover {
-  color: #6759d1;
-  background-color: white;
-  border: 0;
-} */
+
+/* Media query for tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main-card {
+    min-width: 0;
+    width: fit-content;
+    max-width: 26em;
+    white-space: nowrap;
+  }
+  .select-class {
+    flex-direction: column;
+    align-items: center;
+  }
+  .select-class {
+    max-width: 20em;
+    margin-bottom: 10px;
+  }
+  .select-dropdown {
+    max-width: 17em;
+  }
+  .card-container {
+    display: flex;
+    justify-content: center; /* added code */
+  }
+}
+
+/* Media query for PCs */
+@media (min-width: 1024px) {
+  .select-class {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .select-class {
+    max-width: 25em;
+    margin-right: 10px;
+  }
+  .select-dropdown {
+    max-width: 18em;
+  }
+}
