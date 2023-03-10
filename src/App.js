@@ -12,6 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import AddProjectPage from "./Components/AddProjectPage";
 import AddExaminer from "./Components/AddExaminer";
 import AddSupervisor from "./Components/AddSupervisor";
+import AddClass from "./Components/AddClass";
 
 function App() {
   const [classDetails, setClassDetails] = useState({
@@ -47,7 +48,8 @@ function App() {
       {/* <Timeline /> */}
       {/* <AddProjectPage /> */}
       {/* <AddExaminer /> */}
-      <AddSupervisor />
+      {/* <AddSupervisor /> */}
+      <AddClass />
     </Container>
   );
 }
