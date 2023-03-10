@@ -10,6 +10,8 @@ import AdminTeachers from "./Components/AdminTeachers";
 import Timeline from "./Components/Timeline";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import AddProjectPage from "./Components/AddProjectPage";
+import AddExaminer from "./Components/AddExaminer";
+import AddSupervisor from "./Components/AddSupervisor";
 
 function App() {
   const [classDetails, setClassDetails] = useState({
@@ -43,7 +45,9 @@ function App() {
       {/* <AdminProjects /> */}
       {/* <AdminTeachers /> */}
       {/* <Timeline /> */}
-      <AddProjectPage />
+      {/* <AddProjectPage /> */}
+      {/* <AddExaminer /> */}
+      <AddSupervisor />
     </Container>
   );
 }
