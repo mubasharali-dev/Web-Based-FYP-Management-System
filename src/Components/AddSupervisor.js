@@ -52,13 +52,16 @@ function AddSupervisor() {
         </Card.Header>
         <div className="select-class" style={{ display: "flex", gap: "10px" }}>
           <DropdownButton
-            title={selectedClass ? selectedClass : "Select Class*"}
+            title={selectedClass ? selectedClass : "Select Class"}
             onSelect={handleClassSelect}
             className="select-dropdown select-class"
             variant="transparent"
             required
           >
-            <Dropdown.Item eventKey="BSIT-Fall-2019-23">
+            <Dropdown.Item
+              className=".dropdown-item"
+              eventKey="BSIT-Fall-2019-23"
+            >
               BSIT-Fall-2019-23
             </Dropdown.Item>
             <Dropdown.Item eventKey="BSIT-Fall-2019-24">
@@ -72,7 +75,7 @@ function AddSupervisor() {
 
         <div className="select-supervisor">
           <DropdownButton
-            title={selectedSupervisor ? selectedSupervisor : "Select Teacher*"}
+            title={selectedSupervisor ? selectedSupervisor : "Select Teacher"}
             onSelect={handleSupervisorSelect}
             className="select-dropdown"
             variant="transparent"
@@ -91,7 +94,7 @@ function AddSupervisor() {
         {/* SELECTING THE EMPLOYEE ID  */}
         <div className="select-empid">
           <DropdownButton
-            title={selectedEmpId ? selectedEmpId : "Select Emp ID*"}
+            title={selectedEmpId ? selectedEmpId : "Select Emp ID"}
             onSelect={handleEmpId}
             className="select-dropdown"
             variant="transparent"

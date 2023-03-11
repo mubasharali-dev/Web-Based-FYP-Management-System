@@ -34,17 +34,7 @@ function AddProjectPage() {
   };
 
   return (
-    <div
-      className="d-flex justify-content-center align-items-center main-card"
-      style={{
-        margin: "5em 18em",
-        outline: "none",
-        border: "0",
-        boxShadow: "0px 2px 6px rgba(0, 0, 0, 0.25)",
-        maxWidth: "40.75em",
-        maxHeight: "50em",
-      }}
-    >
+    <div className="d-flex justify-content-center align-items-center main-card">
       <Card style={{ outline: "0", border: "0" }}>
         <Card.Header className="d-flex justify-content-between heading ">
           <h4 className="main-heading">Add Project</h4>
@@ -63,7 +53,7 @@ function AddProjectPage() {
         </Card.Header>
         <div className="select-class" style={{ display: "flex", gap: "10px" }}>
           <DropdownButton
-            title={selectedClass ? selectedClass : "Select Class*"}
+            title={selectedClass ? selectedClass : "Select Class"}
             onSelect={handleClassSelect}
             className="select-dropdown select-class"
             variant="transparent"
@@ -84,7 +74,7 @@ function AddProjectPage() {
         <div className="select-supervisor">
           <DropdownButton
             title={
-              selectedSupervisor ? selectedSupervisor : "Select Supervisor*"
+              selectedSupervisor ? selectedSupervisor : "Select Supervisor"
             }
             onSelect={handleSupervisorSelect}
             className="select-dropdown"
@@ -110,7 +100,7 @@ function AddProjectPage() {
           <Dropdown.Toggle variant="transparent" id="dropdown-students">
             {selectedStudents.length > 0
               ? `${selectedStudents.length} Students Selected`
-              : "Select Students* - Min 1, Max 3"}
+              : "Select Students - Min 1, Max 3"}
           </Dropdown.Toggle>
 
           <Dropdown.Menu>

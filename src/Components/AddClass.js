@@ -43,17 +43,7 @@ function AddClass() {
   };
 
   return (
-    <div
-      className="d-flex justify-content-center align-items-center main-card"
-      style={{
-        margin: "5em 18em",
-        outline: "none",
-        border: "0",
-        boxShadow: "0px 2px 6px rgba(0, 0, 0, 0.25)",
-        maxWidth: "40.75em",
-        maxHeight: "50em",
-      }}
-    >
+    <div className="d-flex justify-content-center align-items-center main-card">
       <Card style={{ outline: "0", border: "0" }}>
         <Card.Header className="d-flex justify-content-between heading">
           <h4 className="main-heading">Add Class</h4>

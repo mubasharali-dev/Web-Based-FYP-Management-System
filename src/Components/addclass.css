@@ -2,12 +2,20 @@
   content: "*";
   color: red;
 }
-
+.main-card {
+  margin: 5em 18em;
+  outline: none;
+  border: 0;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+  max-width: 40.75em;
+  max-height: 50em;
+}
 .select-class {
   min-width: 0;
   width: fit-content;
   max-width: 26em;
   white-space: nowrap;
+  /* color: #464646; */
 }
 .select-dropdown {
   width: 25em;
@@ -32,29 +40,30 @@
 /* Media query for phones */
 @media (max-width: 767px) {
   .main-card {
-    margin: 0;
-    min-width: 0;
-    width: fit-content;
-    max-width: 12em;
-    white-space: nowrap;
+    margin: 7em 25em 7em 3em;
+    max-width: 25.75em;
+    max-height: 35em;
   }
   .select-class {
-    width: 100%;
-    max-width: none;
-    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .select-class {
+    max-width: 25em;
+    margin-right: 10px;
   }
   .select-dropdown {
-    max-width: 17em;
+    max-width: 18em;
   }
 }
 
 /* Media query for tablets */
 @media (min-width: 768px) and (max-width: 1023px) {
   .main-card {
-    min-width: 0;
-    width: fit-content;
-    max-width: 26em;
-    white-space: nowrap;
+    margin: 7em 25em 7em 6em;
+    max-width: 35.75em;
+    max-height: 45em;
   }
   .select-class {
     flex-direction: column;
@@ -75,6 +84,9 @@
 
 /* Media query for PCs */
 @media (min-width: 1024px) {
+  .main-card {
+    margin: 7em 25em 7em 19em;
+  }
   .select-class {
     display: flex;
     flex-direction: row;

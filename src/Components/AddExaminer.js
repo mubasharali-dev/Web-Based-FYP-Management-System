@@ -34,7 +34,7 @@ function AddExaminer() {
         maxHeight: "50em",
       }}
     >
-      <Card style={{ outline: "0", border: "0" }}>
+      <Card style={{ outline: "0", border: "0" }} className="card-container">
         <Card.Header className="d-flex justify-content-between heading ">
           <h4 className="main-heading">Add Examiner</h4>
           <Button
@@ -52,7 +52,7 @@ function AddExaminer() {
         </Card.Header>
         <div className="select-class" style={{ display: "flex", gap: "10px" }}>
           <DropdownButton
-            title={selectedClass ? selectedClass : "Select Class*"}
+            title={selectedClass ? selectedClass : "Select Class"}
             onSelect={handleClassSelect}
             className="select-dropdown select-class"
             variant="transparent"
@@ -72,7 +72,7 @@ function AddExaminer() {
 
         <div className="select-supervisor">
           <DropdownButton
-            title={selectedSupervisor ? selectedSupervisor : "Select Name*"}
+            title={selectedSupervisor ? selectedSupervisor : "Select Name"}
             onSelect={handleSupervisorSelect}
             className="select-dropdown"
             variant="transparent"
@@ -91,7 +91,7 @@ function AddExaminer() {
         {/* SELECTING THE EMPLOYEE ID  */}
         <div className="select-empid">
           <DropdownButton
-            title={selectedEmpId ? selectedEmpId : "Select Emp ID*"}
+            title={selectedEmpId ? selectedEmpId : "Select Emp ID"}
             onSelect={handleEmpId}
             className="select-dropdown"
             variant="transparent"

@@ -45,11 +45,11 @@ function App() {
       </Row> */}
       {/* <AdminProjects /> */}
       {/* <AdminTeachers /> */}
-      {/* <Timeline /> */}
+      <Timeline />
       {/* <AddProjectPage /> */}
       {/* <AddExaminer /> */}
       {/* <AddSupervisor /> */}
-      <AddClass />
+      {/* <AddClass /> */}
     </Container>
   );
 }
